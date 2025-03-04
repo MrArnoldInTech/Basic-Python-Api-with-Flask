@@ -24,13 +24,14 @@ def get_user(user_id):
 
     return jsonify(user_data), 200
 
-
+# Only accepted route is post 
 @app.route("/create-user", methods=["POST"])
+# My Function
 def create_user():
+    #Will only get that data that was given in the body
     data = request.get_json()
 
     return jsonify(data), 201
-
 
 if __name__ == "__main__":
     app.run(debug=True)
