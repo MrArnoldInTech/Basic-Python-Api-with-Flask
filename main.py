@@ -28,7 +28,7 @@ def get_user(user_id):
 @app.route("/create-user", methods=["POST"])
 # My Function
 def create_user():
-    #Will only get that data that was given in the body
+    #Will get the data that was given in the body
     data = request.get_json()
 
     return jsonify(data), 201
